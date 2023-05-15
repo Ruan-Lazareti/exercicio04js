@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-page: #FFFFFF;
+  --color-timer: #323238;
+  --color-controls: #323238; 
+  --color-bg-card: #E1E1E6;
+  --color-icon-card: #323238;
+  --color-sound-card: #323238;
+  --color-bg-card-pressed: #E1E1E6;
+  --color-icon-card-pressed: #323238;
+  --color-sound-card-pressed: #323238;
+  font-size: 62.5%;
+}
+
+.page {
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  display: grid;
+
+  background-color: var(--bg-page);
+}
+
+main {
+  display: flex;
+  min-width: 82.0rem;
+
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+.time {
+  display: flex;
+  
+  font-size: 12.5rem;
+  font-weight: 500;
+  line-height: 15.0rem;
+  color: var(--color-timer);
+
+  padding-bottom: 1.7rem;
+}
+
+button{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.buttons{
+  display: flex;
+  
+  width: 31.2rem;
+  justify-content: space-between;
+}
+
+.controls {
+  width: 30.8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+}
+
+.theme {
+  position: absolute;
+  top: 6.4rem;
+  right: 6.4rem;
+}
+
+.hide {
+  display: none;
+}
+
+.buttons button svg path{
+ fill: var(--color-controls)
+}
+
+.controls button svg path:first-child{
+  fill: var(--color-bg-card)
+}
+
+.controls button svg path:last-child{
+  fill: var(--color-icon-card)
+}
+
+.controls button svg rect, .controls button svg circle{
+  fill: var(--color-sound-card)
+}
+
+.controls .forest svg path:first-child{
+  fill: var(--color-bg-card-pressed)
+}
+
+.controls .forest svg path:last-child{
+  fill: var(--color-icon-card-pressed)
+}
+
+.controls .forest svg rect, .controls .forest svg circle{
+  fill: var(--color-sound-card-pressed)
+}
+
+.controls .forest {
+  position: relative;
+}
+
+.controls .forest input {
+  position: absolute;
+  left: 2.4rem;
+  bottom: 3.3rem;
+  
+  
+  width: 9.0rem;
+  height: .4rem;
+  appearance: none;
+  background-color: #323238;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+input::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background-color: #323238;
+  border-radius: 50%;
+}
